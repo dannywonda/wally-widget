@@ -34,12 +34,12 @@ class OrderController extends Controller
      */
     public function order(Request $request)
     {
-        $r = $this->order->red($request->value);
+        $results = $this->order->red($request->value);
  
         $data = [
             'name' => $request->name,
             'product' => $request->value,
-            'results' =>  json_encode($r)
+            'results' =>  json_encode($results)
         ];
 
         return redirect()->back()->with('result', $data);
