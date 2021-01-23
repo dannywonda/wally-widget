@@ -44,8 +44,8 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                @forelse (session('result') as $key =>  $r)
-                                                    <td>{{ $r }}</td>
+                                                @forelse (session('result') as $key =>  $value)
+                                                    <td>{{ $value }}</td>
                                                 @empty
                                                     No Results
                                                 @endforelse
